@@ -25,6 +25,5 @@ document.addEventListener('mousemove', function(event) {
 });
 
 worker.addEventListener('message', function(event) {
-    console.log('@@@@@ counter FE: ', event.data);
     computationCountEl.innerHTML = `Computations Complete: ${event.data}`;
 });
