@@ -27,7 +27,7 @@ A little process running on a background thread, separate from your browser wind
 ```javascript
    const worker = new Worker('worker.js');
 ```
-2. Send messages from worker to main or main to worker
+2. How do you handle communication between main and the web worker?
 ```javascript
     // In main:
     worker.postMessage('Hello there!');
@@ -37,7 +37,7 @@ A little process running on a background thread, separate from your browser wind
     this.postMessage('General Kenobi!');
 ```
 
-3. Receive messages from worker in main or from main in worker
+3. How do you receive messages?
 ```javascript
     // In main:
     worker.addEventListener('message', function(event) {
@@ -74,8 +74,8 @@ A little process running on a background thread, separate from your browser wind
 
 ## Example
 Let's see it in action!
-* [No web worker](examples/no-web-worker/main.js)
-* [Web worker](examples/web-worker/main.js)
+* [No web worker](examples/no-web-worker/main.js) - run `npx serve` at `examples/no-web-worker/` level
+* [Web worker](examples/web-worker/main.js) - run `npx serve` at `examples/web-worker/` level
 
 ## Bonus
 [Check out this cool projet that's trying to offload dependency modules into workers using a loader prefix](https://github.com/developit/workerize-loader)
